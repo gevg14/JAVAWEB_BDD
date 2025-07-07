@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PuertoGames - Tu portal de videojuegos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Oxanium', sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+        }
+        .hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)),
+            url('https://quilt-canary-969.notion.site/image/attachment%3Af7e1b743-0ce6-4881-a8c6-4e06ab6fc45c%3AFlux_Dev_nterior_of_a_modern_gaming_store_named_PuertoGames_fu_0_(1).jpg?table=block&id=2185b3c4-e312-803c-a7fa-f8c8d5a410db&spaceId=c15861af-56ac-4c88-9326-24025d347266&width=1420&userId=&cache=v2') no-repeat center center;
+            background-size: cover;
+        }
+        .font-game {
+            font-family: 'Press Start 2P', cursive;
+        }
+        .game-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(255, 255, 255, 0.1), 0 10px 10px -5px rgba(255, 255, 255, 0.04);
+        }
+        .category-icon {
+            transition: transform 0.3s ease;
+        }
+        .category-icon:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+<!-- Navbar -->
+<nav class="bg-gradient-to-r from-indigo-900 to-purple-900 p-4 shadow-lg">
+    <div class="container mx-auto flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW3nqE6v4xCb1xBERQB47XNVYxhV1cL9pA3g&s" alt="Logo de PuertoGamesPro con diseño pixelado y colores neón azul y rosa" class="h-12">
+            <span class="font-game text-xl text-cyan-300">PuertoGames</span>
+        </div>
+        <div class="hidden md:flex space-x-6">
+            <a href="index.html" class="hover:text-amber-300 transition-colors">Inicio</a>
+            <a href="login.html" class="hover:text-amber-300 transition-colors">Login</a>
+            <a href="categorias.html" class="hover:text-amber-300 transition-colors">Categorías</a>
+            <a href="top-juegos.html" class="hover:text-amber-300 transition-colors">Top Juegos</a>
+            <a href="contacto.html" class="hover:text-amber-300 transition-colors">Contacto</a>
+            <a href="carrito.html" class="hover:text-amber-300 transition-colors">Carrito</a>
+            <a href="graficos.html" class="hover:text-amber-300 transition-colors">
+                Ver Estadísticas del Sitio 📊
+            </a>
+
+        </div>
+        <button class="md:hidden text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </div>
+</nav>
+
+<!-- Seccion Hero -->
+<section class="hero h-96 flex items-center justify-center text-center relative">
+    <div class="px-4 sm:px-0">
+        <h1 class="font-game text-4xl md:text-6xl text-white mb-6">Puerto Games </h1>
+        <p class="text-xl md:text-2xl max-w-2xl mx-auto mb-8">Descubre los mejores juegos, reseñas y noticias del mundo gaming</p>
+        <a href="categorias.html" class="bg-amber-500 hover:bg-amber-600 text-black font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg inline-block">
+            EXPLORAR AHORA!!
+        </a>
+    </div>
+</section>
+
+<<!-- Games -->
+<section class="container mx-auto py-12 px-4">
+    <div class="flex justify-between items-center mb-8">
+        <h2 class="text-3xl font-bold text-amber-400 border-b-2 border-amber-400 pb-2">JUEGOS POPULARES</h2>
+        <a href="categorias.html" class="text-cyan-300 hover:text-cyan-200 transition-colors">Ver todos →</a>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Tarjeta 1-->
+        <div class="game-card bg-slate-800 rounded-lg overflow-hidden flex flex-col">
+            <div class="relative">
+                <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1817070/capsule_616x353.jpg?t=1750955096" alt="Portada del juego de ciencia ficción con protagonista femenina en paisaje futurista" class="w-full h-48 object-cover">
+                <span class="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">NUEVO</span>
+            </div>
+            <div class="p-4 flex flex-col flex-grow">
+                <h3 class="font-bold text-lg mb-2 min-h-[3rem]">Marvel's Spider-Man Remastered</h3>
+                <div class="flex justify-between items-center text-sm mb-4">
+                    <span class="text-amber-300">Aventura</span>
+                    <span class="bg-emerald-700 text-white px-2 py-1 rounded">95%</span>
+                </div>
+                <p class="text-gray-300 text-sm mb-4 flex-grow"> En Marvel's Spider-Man Remasterizado, nos encontramos con un Peter Parker experimentado en luchar contra el crimen organizado en la ciudad de Nueva York.Descubre la historia arácnida completa con Marvel's Spider-Man: Miles Morales Ultimate Edition.</p>
+                <a href="Spider-Man.html" class="mt-auto block w-full bg-indigo-600 hover:bg-indigo-700 text-white text-center py-2 rounded transition-colors">Ver Detalles</a>
+            </div>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="game-card bg-slate-800 rounded-lg overflow-hidden flex flex-col">
+            <img src="https://m.media-amazon.com/images/M/MV5BZGIxNmMwZTQtNDUyNy00YTk0LThjY2QtZDA3N2E5Y2U4ODVkXkEyXkFqcGc@._V1_.jpg" alt="Juego de carreras con vehículos futuristas en circuito urbano nocturno" class="w-full h-48 object-cover">
+            <div class="p-4 flex flex-col flex-grow">
+                <h3 class="font-bold text-lg mb-2 min-h-[3rem]">Fall Guys</h3>
+                <div class="flex justify-between items-center text-sm mb-4">
+                    <span class="text-amber-300">Multijugador</span>
+                    <span class="bg-emerald-700 text-white px-2 py-1 rounded">88%</span>
+                </div>
+                <p class="text-gray-300 text-sm mb-4 flex-grow">Fall Guys es un party royale gratuito y multiplataforma. Compite a lo torpe en absurdos circuitos de obstáculos con amigos o construye tu propio circuito caótico para compartirlo con la comunidad. Lánzate y esquiva hasta alcanzar la victoria en el panteón de la torpeza.</p>
+                <a href="FallGuys.html" class="mt-auto block w-full bg-indigo-600 hover:bg-indigo-700 text-white text-center py-2 rounded transition-colors">Ver Detalles</a>
+            </div>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="game-card bg-slate-800 rounded-lg overflow-hidden flex flex-col">
+            <div class="relative">
+                <img src="https://thesamstore.com/wp-content/uploads/2019/07/minecraft-java-mas-bedrock.jpg" alt="Juego de terror con personaje principal en mansión abandonada iluminada por linterna" class="w-full h-48 object-cover">
+                <span class="absolute top-2 right-2 bg-purple-500 text-white text-xs font-bold px-2 py-1 rounded">VR</span>
+            </div>
+            <div class="p-4 flex flex-col flex-grow">
+                <h3 class="font-bold text-lg mb-2 min-h-[3rem]">Minecraft</h3>
+                <div class="flex justify-between items-center text-sm mb-4">
+                    <span class="text-amber-300">Multijugador</span>
+                    <span class="bg-emerald-700 text-white px-2 py-1 rounded">92%</span>
+                </div>
+                <p class="text-gray-300 text-sm mb-4 flex-grow">Minecraft es un juego formado por bloques, criaturas y comunidades. La elección es tuya: sobrevivir a la noche o crear una obra de arte. Pero, si te abruma tener que explorar un nuevo y vasto mundo por tu cuenta, ¡no temas! ¡Vamos a explorar de qué va Minecraft!</p>
+                <a href="Minecraft.html" class="mt-auto block w-full bg-indigo-600 hover:bg-indigo-700 text-white text-center py-2 rounded transition-colors">Ver Detalles</a>
+            </div>
+        </div>
+        <!-- Tarjeta 4-->
+        <div class="game-card bg-slate-800 rounded-lg overflow-hidden flex flex-col">
+            <div class="relative">
+                <img src="https://imgeucdn.gamespress.com/cdn/files/Games%20Press/2024/09/271152-f94c79fd/Key_Art_EN.jpg?w=533&mode=max&otf=y&quality=90&format=jpg&bgcolor=white&sky=f4ef8310be384cfc2e9061972d874c1bbbbf3a95a19da7925f89fae4053321cf" alt="Portada del juego de jugadoras estrellas femeninas" class="w-full h-48 object-cover">
+                <span class="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">NUEVO</span>
+            </div>
+            <div class="p-4 flex flex-col flex-grow">
+                <h3 class="font-bold text-lg mb-2 min-h-[3rem]">Genshin Impact</h3>
+                <div class="flex justify-between items-center text-sm mb-4">
+                    <span class="text-amber-300">Aventura / Multijugador</span>
+                    <span class="bg-emerald-700 text-white px-2 py-1 rounded">99%</span>
+                </div>
+                <p class="text-gray-300 text-sm mb-4 flex-grow">Genshin Impact es un juego de rol (RPG) de aventura de mundo abierto, con elementos de juego de acción y gacha. Se desarrolla en un mundo de fantasía llamado Teyvat, donde los jugadores exploran, luchan contra enemigos, recolectan personajes con habilidades únicas. </p>
+                <a href="GenshinImpact.html" class="mt-auto block w-full bg-indigo-600 hover:bg-indigo-700 text-white text-center py-2 rounded transition-colors">Ver Detalles</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- News Section -->
+<section class="container mx-auto py-12 px-4">
+    <h2 class="text-3xl font-bold text-amber-400 mb-8 border-b-2 border-amber-400 pb-2">ÚLTIMAS NOTICIAS</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- News Card 1 -->
+        <div class="bg-slate-800 rounded-lg overflow-hidden">
+            <img src="https://i.blogs.es/73a50a/minecraft-lego-brickcraft/840_560.jpeg" alt="Evento de lanzamiento de juego con multitudes en fondo de pantalla gigante mostrando imágenes del juego" class="w-full h-48 object-cover">
+            <div class="p-6">
+                <div class="flex items-center text-sm text-gray-400 mb-2">
+                    <span class="bg-indigo-600 text-white px-2 py-1 rounded mr-2">Novedad</span>
+                    <span>Hace 2 días</span>
+                </div>
+                <h3 class="font-bold text-xl mb-3">Mojang iba a lanzar un nuevo Minecraft en colaboración con LEGO, pero fue cancelado hace 13 años: su prototipo fue recuperado y está en línea.</h3>
+                <a href="https://www.3djuegos.lat/pc/mojang-iba-a-lanzar-nuevo-minecraft-colaboracion-lego-fue-cancelado-hace-13-anos-su-prototipo-fue-recuperado-esta-linea" class="text-cyan-300 hover:text-cyan-200 transition-colors font-medium">Leer más →</a>
+            </div>
+        </div>
+
+        <!-- News Card 2 -->
+        <div class="bg-slate-800 rounded-lg overflow-hidden">
+            <img src="https://i.blogs.es/792267/sin-titulo---2025-06-03t101216.931/840_560.webp" alt="Equipo de desarrollo trabajando en computadoras con código en pantallas" class="w-full h-48 object-cover">
+            <div class="p-6">
+                <div class="flex items-center text-sm text-gray-400 mb-2">
+                    <span class="bg-yellow-600 text-white px-2 py-1 rounded mr-2">Actualización</span>
+                    <span>Hace 1 semana</span>
+                </div>
+                <h3 class="font-bold text-xl mb-3">Si todavía no has jugado al remake de Resident Evil 4, hoy te lo puedes llevar a casa a un precio de risa.</h3>
+                <a href="https://www.vidaextra.com/seleccion/este-espectacular-remake-estuvo-nominado-a-goty-su-ano-ahora-te-sale-a-precio-outlet-resident-evil-4" class="text-cyan-300 hover:text-cyan-200 transition-colors font-medium">Leer más →</a>
+            </div>
+        </div>
+
+        <!-- News Card 3 -->
+        <div class="bg-slate-800 rounded-lg overflow-hidden">
+            <img src="https://www.rocketleague.com/_next/image?url=https%3A%2F%2Fus-west-2-epicgames.graphassets.com%2FA0Gpf4ZpfQzaTePr3NRc1z%2Fresize%3Dfit%3Aclip%2Cheight%3A1080%2Cwidth%3A1920%2Foutput%3Dformat%3Awebp%2Fcmbtzxmuw155j07ogfigf6yro&w=1080&q=75" alt="Fotografía de estudio con gamer profesional en torneo de esports" class="w-full h-48 object-cover">
+            <div class="p-6">
+                <div class="flex items-center text-sm text-gray-400 mb-2">
+                    <span class="bg-pink-600 text-white px-2 py-1 rounded mr-2">Esports</span>
+                    <span>Hace 3 días</span>
+                </div>
+                <h3 class="font-bold text-xl mb-3">Notas del parche v2.53 de Rocket League: Temporada 19 ya disponible</h3>
+                <p class="text-gray-300 mb-4">¡La temporada 19 ya está disponible! Incluye el 10.º aniversario de Rocket League, el sistema renovado de clubes, el evento por tiempo limitado adidas FC Clash, Rivalidad sobre ruedas y mucho más.</p>
+                <a href="https://www.rocketleague.com/es-es/news/rocket-league-patch-notes-v2-53-season-19-live" class="text-cyan-300 hover:text-cyan-200 transition-colors font-medium">Leer más →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter -->
+<section class="bg-gradient-to-r from-amber-700 to-amber-500 py-12">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">¡No te pierdas nada!</h2>
+        <p class="text-white mb-6 max-w-2xl mx-auto">Suscríbete a nuestro boletín para recibir las últimas noticias, ofertas y actualizaciones directamente en tu bandeja de entrada.</p>
+        <div class="flex flex-col md:flex-row max-w-md md:max-w-xl mx-auto gap-2">
+            <input type="email" placeholder="Tu correo electrónico" class="flex-grow px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-300">
+            <button class="bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 px-6 rounded-lg transition-colors">SUSCRIBIRSE</button>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-slate-900 text-gray-400 py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center space-x-4 mb-4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW3nqE6v4xCb1xBERQB47XNVYxhV1cL9pA3g&s" alt="Logo pequeño de GameWorld en estilo pixel art" class="h-10">
+                    <span class="font-game text-xl text-cyan-300">PuertoGames</span>
+                </div>
+                <p class="mb-4">El portal definitivo para los amantes de los videojuegos.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-white font-bold text-lg mb-4">Enlaces rápidos</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white transition-colors">Inicio</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Sobre nosotros</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Juegos</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Noticias</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-white font-bold text-lg mb-4">Categorías</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white transition-colors">Acción</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Aventura</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">RPG</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Estrategia</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Deportes</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-white font-bold text-lg mb-4">Contacto</h3>
+                <address class="not-italic">
+                    <p class="mb-2">Calle del Juego 123</p>
+                    <p class="mb-2">Puerto Montt, Chile</p>
+                    <p class="mb-2">contacto@PuertoGames.com</p>
+                    <p>+56 9 1234 5678</p>
+                </address>
+            </div>
+        </div>
+        <div class="border-t border-slate-800 mt-8 pt-8 text-center">
+            <p>© 2025 PuertoGames. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Mobile menu toggle
+    document.querySelector('button[class*="md:hidden"]').addEventListener('click', function() {
+        const menu = document.querySelector('.hidden.md\\:flex');
+        menu.classList.toggle('hidden');
+        menu.classList.toggle('flex');
+        menu.classList.toggle('flex-col');
+        menu.classList.toggle('absolute');
+        menu.classList.toggle('top-16');
+        menu.classList.toggle('right-4');
+        menu.classList.toggle('bg-slate-900');
+        menu.classList.toggle('p-4');
+        menu.classList.toggle('rounded-lg');
+        menu.classList.toggle('z-50');
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+</body>
+</html>
+
